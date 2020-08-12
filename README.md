@@ -90,7 +90,7 @@ yarn build or npm run build
 
 ### 开发规范
 
-**1.组件分为页面组件、通用组件、模块组件，均用大驼峰(CamelCase)的方式命名文件夹，然后入口组件用index.vue命名；  
+1.组件分为页面组件、通用组件、模块组件，均用大驼峰(CamelCase)的方式命名文件夹，然后入口组件用index.vue命名；  
 2.通用组件放在src/components里，页面组件放在src/pages里，页面组件的模块组件放在对应组件文件夹的components里；  
 3.过滤器放在src/filters里，index.js存放全局过滤方法，组件单独过滤器按页面分类，建立对应命名的js文件单独引入组件内；  
 4.vuex按照页面分类modules，通用状态在src/store根目录下面；建立mutationTypes.js管理type，type用大写字母加下划线分割命名；  
@@ -99,7 +99,7 @@ yarn build or npm run build
 7.src/layouts存放布局组件；  
 8.src/utils文件夹用于抽离方法，tools.js存放工具方法；  
 9.src/assets用于存放静态资源，styles里的common.scss是全局样式，variables是scss全局变量，已在vue.config.js里面配置好，无需组件单独引入；
-10.配置了图片路径、图片压缩、生产环境删除console.log等，在vue.config.js**
+10.配置了图片路径、图片压缩、生产环境删除console.log等，在vue.config.js
 
 ### 最后
 项目架构是我的开发习惯，仅供参考
