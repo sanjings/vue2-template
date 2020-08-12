@@ -5,7 +5,7 @@
 import { axiosGet } from "@/service"
 import { GET_PROVINCE_CITY } from "./url"
 
-export default {
+export {
    /**
     * 获取省份和城市
     * @param {Object} params 

@@ -5,7 +5,7 @@
 import { axiosGet } from "@/service"
 import { GET_OSS_IMG_UPLOAD_SIGN } from "./url"
 
-export default {
+export {
    /**
     * 获取阿里云图片上传sign
     */

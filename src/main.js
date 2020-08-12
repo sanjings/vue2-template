@@ -5,6 +5,7 @@ import store from './store'
 
 import 'assets/styles/reset.css'
 import 'assets/styles/common.scss'
+import 'assets/fonts/iconfont.css'
 
 // 引入全局过滤器
 import filters from "@/filters/index"

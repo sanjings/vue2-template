@@ -1,5 +1,6 @@
 # 基于VUE2.6的单页面项目模板
 **最近公司以vue单页面为技术栈的新项目较多，因此搭建一个通用模板方便快速搭建新项目。**
+
 ## 项目依赖
 **vue@^2.6.11  
   vue-router@^3.2.0  
@@ -97,7 +98,8 @@ yarn build or npm run build
 6.src/plugins用于管理项目插件，如Element-UI按需引入；  
 7.src/layouts存放布局组件；  
 8.src/utils文件夹用于抽离方法，tools.js存放工具方法；  
-9.src/assets用于存放静态资源，styles里的common.scss是全局样式，variables是scss全局变量，已在vue.config.js里面配置好，无需组件单独引入；**
+9.src/assets用于存放静态资源，styles里的common.scss是全局样式，variables是scss全局变量，已在vue.config.js里面配置好，无需组件单独引入；
+10.配置了图片路径、图片压缩、生产环境删除console.log等，在vue.config.js**
 
 ### 最后
 项目架构是我的开发习惯，仅供参考
