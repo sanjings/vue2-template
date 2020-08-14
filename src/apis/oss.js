@@ -5,11 +5,13 @@
 import { axiosGet } from "@/service"
 import { GET_OSS_IMG_UPLOAD_SIGN } from "./url"
 
-export {
-   /**
-    * 获取阿里云图片上传sign
-    */
-   getOssImgUploadSign() {
-      return axiosGet(GET_OSS_IMG_UPLOAD_SIGN)
-   }
+/**
+ * 获取阿里云图片上传sign
+ */
+const getOssImgUploadSign = () => {
+   return axiosGet(GET_OSS_IMG_UPLOAD_SIGN)
+}
+
+export { 
+   getOssImgUploadSign
 }

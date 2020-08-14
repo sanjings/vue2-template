@@ -5,12 +5,14 @@
 import { axiosGet } from "@/service"
 import { GET_PROVINCE_CITY } from "./url"
 
+/**
+ * 获取省份和城市
+ * @param {Object} params 
+ */
+const getProvinceCity = (params) => {
+   return axiosGet(GET_PROVINCE_CITY, params)
+}
+
 export {
-   /**
-    * 获取省份和城市
-    * @param {Object} params 
-    */
-   getProvinceCity(params) {
-      return axiosGet(GET_PROVINCE_CITY, params)
-   }
+   getProvinceCity
 }
