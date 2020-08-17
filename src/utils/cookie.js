@@ -13,11 +13,7 @@ export default {
     const date = new Date;
     date.setTime(date.getTime() + 60 * 60 * 1000 * hours);
 
-    if (domain) {
-      window.document.cookie = name + "=" + encodeURIComponent(value) + `;domain=${domain};path=${path};expires=` + date.toUTCString();
-    } else {
-      window.document.cookie = name + "=" + encodeURIComponent(value) + `;path=${path};expires=` + date.toUTCString();
-    }
+    window.document.cookie = name + "=" + encodeURIComponent(value) + `${domain ? ';domain=' + domain : ''};path=${path};expires=` + date.toUTCString();
   },
   get (name) {
     let v = window.document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
