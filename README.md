@@ -12,7 +12,7 @@
   node-sass@^4.12.0  
   sass-loader@^8.0.2  
   image-webpack-loader@^6.0.0  
-  uglifyjs-webpack-plugin@^2.2.0**
+  terser-webpack-plugin@^2.2.0**
 
 ## 安装依赖
 ```
