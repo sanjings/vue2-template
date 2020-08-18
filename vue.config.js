@@ -1,5 +1,5 @@
 const path = require('path');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const terserWebpackPlugin = require('terser-webpack-plugin')
 
 const IS_PRODUCTION = ['production', 'prod'].includes(process.env.NODE_ENV)
 
@@ -34,8 +34,8 @@ module.exports = {
       if (IS_PRODUCTION) {
          // 代码压缩
          config.plugins.push(
-            new UglifyJsPlugin({
-               uglifyOptions: {
+            new terserWebpackPlugin({
+               terserOptions: {
                   // 删除console
                   compress: {
                      drop_debugger: true,
@@ -43,6 +43,7 @@ module.exports = {
                      pure_funcs: ['console.log']
                   }
                },
+               cache: true,
                sourceMap: false,
                parallel: true
             })
