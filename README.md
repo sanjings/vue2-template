@@ -2,21 +2,21 @@
 **最近公司以vue单页面为技术栈的新项目较多，因此搭建一个通用模板方便快速搭建新项目。**
 
 ## 项目依赖
-**vue@^2.6.11  
-  vue-router@^3.2.0  
-  vuex@^3.4.0  
-  vue-cli@^4.5.3  
-  axios@^0.19.2  
-  qs@^6.9.2  
-  dayjs@^1.8.33  
-  node-sass@^4.12.0  
-  sass-loader@^8.0.2  
-  image-webpack-loader@^6.0.0  
-  terser-webpack-plugin@^2.2.0**
+vue@2.6.11  
+vue-router@3.2.0  
+vuex@3.4.0  
+vue-cli@4.5.3  
+axios@0.19.2  
+qs@6.9.2  
+dayjs@1.8.33  
+node-sass@4.12.0  
+sass-loader@8.0.2  
+image-webpack-loader@6.0.0  
+terser-webpack-plugin@2.2.0
 
 ## 安装依赖
 ```
-yarn install
+yarn install or npm install
 ```
 **如果没有安装yarn可以使用cnpm**
 
@@ -102,5 +102,5 @@ yarn build or npm run build
 10.配置了路径别名、图片压缩、生产环境删除console.log等，在vue.config.js
 
 ### 最后
-项目架构是我个人的开发习惯，仅供参考
+项目架构是我个人的开发习惯，仅供参考，喜欢就点个⭐吧，谢谢支持
 
