@@ -1,7 +1,7 @@
 # 基于VUE2.6的单页面项目模板
 **最近公司以vue单页面为技术栈的新项目较多，因此搭建一个通用模板方便快速搭建新项目。**
 
-## 项目依赖
+### 项目依赖
 vue@2.6.11  
 vue-router@3.2.0  
 vuex@3.4.0  
@@ -14,7 +14,7 @@ sass-loader@8.0.2
 image-webpack-loader@6.0.0  
 terser-webpack-plugin@2.2.0
 
-## 安装依赖
+### 安装依赖
 ```
 yarn install or npm install
 ```
