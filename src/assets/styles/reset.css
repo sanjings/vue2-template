@@ -58,9 +58,8 @@ button::-moz-focus-inner,
   padding: 0;
 }
 img {
+   display: block;
    width: 100%;
-   font-size: 0;
-   vertical-align: middle;
 }
 ol, ul, li {
 	list-style: none;
