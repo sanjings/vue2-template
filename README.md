@@ -45,13 +45,15 @@ yarn build or npm run build
 │  ├─index.html 单页面入口文件 
 ├─src 开发目录
 │  ├─apis ajax请求管理
+│  │  ├─config.js axios配置   
+│  │  ├─axios.js axios二次封装   
 │  │  ├─url.js 接口统一管理   
-│  │  ├─common.js 公共请求   
-│  │  ├─oss.js oss阿里云api请求 
+│  │  ├─requests 网络请求合集   
 │  ├─assets 静态资源目录 
 │  │  ├─fonts 字体  
 │  │  ├─images 图片  
 │  │  ├─styles css  
+│  │  ├─scripts 公用脚本  
 │  ├─components 公共组件目
 │  ├─filters 过滤器
 │  ├─layouts 布局组件
@@ -62,9 +64,6 @@ yarn build or npm run build
 │  ├─plugins 插件管理 
 │  ├─router 路由目录 
 │  │  ├─index.js 路由配置入口文件
-│  ├─service axios封装
-│  │  ├─index.js axios实例   
-│  │  ├─config.js 配置
 │  ├─store vuex 
 │  │  ├─index.js 入口文件
 │  │  ├─stats.js

@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'Item',
+  name: 'ListItem',
   props: {
     data: {
       type: Object,

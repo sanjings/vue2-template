@@ -6,6 +6,7 @@
 import axios from "axios"
 import qs from "qs"
 import { TIME_OUT, errorHandle } from './config'
+import store from '../store'
 
 // 创建axios实例
 const ajax = axios.create({
@@ -53,8 +54,9 @@ ajax.interceptors.response.use(res => {
    }
 )
 
-const axiosGet = (url, data) => ajax.post(url, data);
-const axiosPost = (url, data) => ajax.get(url, { params: data });
+
+const axiosGet = (url, data) => ajax.get(url, { params: data });
+const axiosPost = (url, data) => ajax.post(url, data);
 
 export {
    axiosGet,

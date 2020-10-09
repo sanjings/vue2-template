@@ -1,6 +1,6 @@
 <template>
   <div class="list-wrapper">
-    <item
+    <list-item
       v-for="(item, index) of data"
       :key="index"
       :data="item"
@@ -10,12 +10,12 @@
 </template>
 
 <script>
-import Item from './Item'
+import ListItem from './ListItem'
 
 export default {
   name: 'List',
   components: {
-    Item
+    ListItem
   },
   props: {
     data: {

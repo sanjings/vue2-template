@@ -39,57 +39,36 @@ const getUrlKey = key => {
 
 /**
  * 防抖函数
- * @params {Function} 要执行的函数
- * @params {Number} 延迟执行毫秒数
- * @params {Boolean} 是否立即执行
+ * @params {Function} fn 要执行的函数
+ * @params {Number} delayTime 延迟执行的时间
  * @return {Function}
  */
-function debounce (fn, waitTime = 300, immediate) {
+export const debounce = (fn, delayTime = 300) => {
   let timer = null;
-  return function () {
-    var _this = this,
-    args = arguments;
-    timer && clearTimeout(timer)
-    if (immediate) {
-      var callNow = !timer;
-      timer = setTimeout(function(){
-        timer = null;
-      }, waitTime)
-    if (callNow) {
+  return function (...args) {
+    const _this = this;
+
+    timer && clearTimeout(timer);
+    timer = setTimeout(() => {
       fn.apply(_this, args);
-    }
-    } else {
-      timer = setTimeout(function(){
-        fn.apply(_this, args);
-      }, waitTime)
-    }  
+    }, delayTime)
   }
-};
+}
 
 /**
  * 节流函数
  * @params {Function} fn 要执行的函数
  * @params {Number} waitTime 间隔执行的时间
- * @params {Boolean} delay 是否延迟执行
  * @return {Function}
  */
-function throttle (fn, waitTime = 300, delay) {
-  let timer = null, preTime = 0;
-  return function() {
-    let _self = this, args = arguments;
-    if (delay) {
-      if(!timer){
-        timer = setTimeout(function() {
-          timer = null;
-          fn.apply(_self, args);
-        }, waitTime)
-      }
-    } else {
-      var nowTime = new Date().getTime();
-      if (nowTime - preTime >= waitTime) {
-        fn.apply(_self, args);
-        preTime = nowTime;
-      }
+export const throttle = (fn, waitTime) => {
+  let preTime = 0;
+  return function (...args) {
+    const nowTime = new Date().getTime();
+
+    if (nowTime - preTime >= waitTime) {
+      fn.apply(this, args);
+      preTime = nowTime;
     }
   }
 }

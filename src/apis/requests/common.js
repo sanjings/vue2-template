@@ -2,8 +2,8 @@
  * @overview 公共相关请求集合
  * */
 
-import { axiosGet } from "@/service"
-import { GET_PROVINCE_CITY } from "./url"
+import { axiosGet } from "../axios"
+import { GET_PROVINCE_CITY } from "../url"
 
 /**
  * 获取省份和城市
