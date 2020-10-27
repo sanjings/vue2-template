@@ -66,17 +66,17 @@
 8. 页面组件和业务模块组件统一放在pages文件夹中，页面组件作为容器组件，用于处理数据、逻辑和布局，业务模块组件是对应页面的UI组件，只负责UI不负责逻辑；
 9. 通用组件和其它UI组件统一放在components中； 
 10. 组件内部书写顺序：
-   - template
-   - js
-      - name
-      - components
-      - data
-      - computed
-      - 生命周期函数
-      - methods
-      - filters
-      - watch
-   - css
+     - template
+     - js
+        - name
+        - components
+        - data
+        - computed
+        - 生命周期函数
+        - methods
+        - filters
+        - watch
+     - css
 11. vuex规范：
     - 每个页面模块有自己独立的vuex模块，放在对应文件夹下的store文件夹下，在全局的store中导入
     - state、mutations、getters、actions分离，在index中导入
@@ -87,12 +87,9 @@
 ```
 git clone https://github.com/sanjing14/vue2-spa-template.git
 ```
-#### 安装依赖
+#### 安装依赖（如果没有yarn推荐使用cnpm）
 ```
 cd vue2-spa-template
-```
-**如果没有yarn推荐使用cnpm**
-```
 npm install cnpm -g --registry=https://registry.npm.taobao.org
 yarn install or cnpm install
 ```
