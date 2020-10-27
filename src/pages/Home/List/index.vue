@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import ListItem from './ListItem'
+import ListItem from './item'
 
 export default {
   name: 'List',
@@ -20,7 +20,7 @@ export default {
   props: {
     data: {
       type: Array,
-      default: () => ([])
+      default: () => []
     }
   }
 }

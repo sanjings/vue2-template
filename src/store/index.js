@@ -1,21 +1,21 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import states from './states'
+import state from './state'
 import getters from './getters'
 import mutations from './mutations'
 import actions from './actions'
-import home from './home'
-import list from './list'
+import homeStore from 'pages/Home/store'
+import aboutStore from 'pages/About/store'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  states,
+  state,
   getters,
   mutations,
   actions,
   modules: {
-    home,
-    list
+    home: homeStore,
+    about: aboutStore
   }
 })

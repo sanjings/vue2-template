@@ -1,1 +1,3 @@
-export const SET_COUNT = 'SET_COUNT';
+export const PUSH_TOKEN = 'PUSH_TOKEN';
+
+export const CLEAR_TOKEN = 'CLEAR_TOKEN';

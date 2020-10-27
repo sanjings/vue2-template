@@ -27,8 +27,7 @@ module.exports = {
          .set('assets', resolve('src/assets'))
          .set('components', resolve('src/components'))
          .set('pages', resolve('src/pages'))
-         .set('utils', resolve('src/utils'))
-         .set('store', resolve('src/store'));
+         .set('utils', resolve('src/utils'));
    },
    configureWebpack: config => {
       if (IS_PRODUCTION) {

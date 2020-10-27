@@ -6,7 +6,8 @@
 import axios from "axios"
 import qs from "qs"
 import { TIME_OUT, errorHandle } from './config'
-import store from '../store'
+import store from '@/store'
+import { PUSH_TOKEN } from '@/store/mutationTypes'
 
 // 创建axios实例
 const ajax = axios.create({
@@ -21,7 +22,7 @@ const ajax = axios.create({
  */
 ajax.interceptors.request.use(config => {
    config.cancelToken = new axios.CancelToken(cancel => {
-      store.commit('pushToken', {cancelToken: cancel})
+      store.commit(PUSH_TOKEN, {cancelToken: cancel})
    })
 
    return config;
