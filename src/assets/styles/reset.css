@@ -1,10 +1,11 @@
 html {
-   line-height: 1.15;;
-   -webkit-text-size-adjust: none;
+  line-height: 1.15;;
+  -webkit-text-size-adjust: none;
 }
 html,body{
-   height: 100%;
-   -webkit-tap-highlight-color: rgba(0,0,0,0);
+  width: 100%;
+  height: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 html, body, div, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -19,35 +20,39 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-   border: 0;
-   outline: 0;
-	font: inherit;
-   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  box-sizing: border-box;
 }
 h1,h2,h3,h4,h5,h6,em,i,strong {
-   font-style: normal;
+  font-style: normal;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, main
 footer, header, hgroup, menu, nav, section, video {
-	display: block;
+  display: block;
 }
 input,
 button,
 optgroup,
 textarea,
 select {
-   margin: 0;
-   line-height: 1.15;
-   outline: 0;
-   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.15;
+  outline: 0;
+  box-sizing: border-box;
 }
 button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
+  border: 1px solid transparent;
+  outline: none; 
+  background-color: transparent;
   -webkit-appearance: button;
 }
 button::-moz-focus-inner,
@@ -58,50 +63,32 @@ button::-moz-focus-inner,
   padding: 0;
 }
 img {
-   display: block;
-   width: 100%;
+  display: block;
+  width: 100%;
 }
 ol, ul, li {
-	list-style: none;
+  list-style: none;
 }
 a {
-   color: #333;
-   text-decoration: none;
+  color: #333;
+  text-decoration: none;
 }
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 [hidden] {
-   display: none;
-}
-/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
-::-webkit-scrollbar {
-   width: 8px;
-   height: 8px;
-   background-color: transparent;
-}
-/*定义滚动条轨道 内阴影+圆角*/
-::-webkit-scrollbar-track {
-   -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0);
-   border-radius: 8px;
-   background-color: transparent;
-}
-/*定义滑块 内阴影+圆角*/
-::-webkit-scrollbar-thumb {
-   border-radius: 8px;
-   -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0);
-   background-color: #d6dcda;
+  display: none;
 }

@@ -1,37 +1,34 @@
 body{
-   width: 100%;
-   height: 100%;
-   font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-   font-size: $font-size-default;
-   font-weight: 400;
-   color: $color-default;
-   background-color: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-size: $font-size-default;
+  font-weight: 400;
+  color: $color-default;
+  background-color: #fff;
 }
-
 /* 清除浮动 */
 .clearfix {
-   zoom: 1;
+  zoom: 1;
 }
 .clearfix::after {
-   content: "";
-   width: 0;
-   height: 0;
-   visibility: hidden;
-   display: block;
-   clear: both;
-   overflow: hidden;
+  content: "";
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
+  overflow: hidden;
 } 
 
 /* 文本截取 */
 .ellipsis{
-   overflow: hidden;
-   white-space: nowrap;
-   text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 /* 2行文本截取 */
 .row-ellipsis{
-   display: -webkit-box;
-   overflow: hidden;
-   -webkit-line-clamp: 2;
-   -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
