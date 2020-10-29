@@ -80,7 +80,7 @@
 11. vuex规范：
     - 每个页面模块有自己独立的vuex模块，放在对应文件夹下的store文件夹下，在全局的store中导入
     - state、mutations、getters、actions分离，在index中导入
-    - mutations和actions中的方法名称，在mutationTypes中管理
+    - mutations中的事件类型，在mutationTypes中管理
 
 ### 项目运行
 #### clone项目
