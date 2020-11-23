@@ -50,6 +50,7 @@ module.exports = {
       }
    },
    css:{
+      extract: IS_PRODUCTION ? true : false,
       sourceMap: false, // 关闭source map
       loaderOptions: {
          scss: {

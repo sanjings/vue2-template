@@ -37,7 +37,7 @@
 │  │  ├─state.js
 │  │  ├─getters.js
 │  │  ├─mutations.js
-│  │  ├─mutationTypes.js
+│  │  ├─actionTypes.js
 │  │  ├─actions.js
 │  ├─utils 工具方法目录
 │  │  ├─tools.js 工具方法  
@@ -80,7 +80,7 @@
 11. vuex规范：
     - 每个页面模块有自己独立的vuex模块，放在对应文件夹下的store文件夹下，在全局的store中导入
     - state、mutations、getters、actions分离，在index中导入
-    - mutations中的事件类型，在mutationTypes中管理
+    - 事件类型，在actionTypes中管理
 
 ### 项目运行
 #### clone项目

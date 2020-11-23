@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import store from '@/store'
-import { CLEAR_TOKEN } from '@/store/mutationTypes'
+import { CLEAR_TOKEN } from '@/store/actionTypes'
 
 Vue.use(VueRouter)
 

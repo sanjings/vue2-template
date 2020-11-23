@@ -7,7 +7,7 @@ import axios from "axios"
 import qs from "qs"
 import { TIME_OUT, errorHandle } from './config'
 import store from '@/store'
-import { PUSH_TOKEN } from '@/store/mutationTypes'
+import { PUSH_TOKEN } from '@/store/actionTypes'
 
 // 创建axios实例
 const ajax = axios.create({

@@ -1,4 +1,4 @@
-import { PUSH_TOKEN, CLEAR_TOKEN } from './mutationTypes'
+import { PUSH_TOKEN, CLEAR_TOKEN } from './actionTypes'
 
 export default {
   [PUSH_TOKEN] (state, payload) {
