@@ -8,7 +8,7 @@ import 'assets/styles/common.scss'
 import 'assets/fonts/iconfont.css'
 
 // 引入全局过滤器
-import filters from "utils/filters"
+import filters from "./filters/global.js"
 Object.keys(filters).forEach(item => Vue.filter(item, filters[item]))
 
 // 捕获全局promise-reject
