@@ -1,3 +1,5 @@
+const BASE_URL = 'http://localhost:3300'
+
 /* 请求超时时间 */
 const TIME_OUT = 1000 * 20
 
@@ -15,6 +17,7 @@ const errorHandle = status => {
 }
 
 export {
+   BASE_URL,
    TIME_OUT,
    errorHandle
 }

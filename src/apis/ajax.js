@@ -5,12 +5,13 @@
 
 import axios from "axios"
 import qs from "qs"
-import { TIME_OUT, errorHandle } from './config'
+import { BASE_URL, TIME_OUT, errorHandle } from './config'
 import store from '@/store'
 import { PUSH_TOKEN } from '@/store/actionTypes'
 
 // 创建axios实例
-const ajax = axios.create({
+const axiosInstance = axios.create({
+   baseURL: BASE_URL,
    timeout: TIME_OUT,
    transformRequest: [function (data) {
       return qs.stringify(data)
@@ -20,7 +21,7 @@ const ajax = axios.create({
 /**
  * 请求拦截器
  */
-ajax.interceptors.request.use(config => {
+axiosInstance.interceptors.request.use(config => {
    config.cancelToken = new axios.CancelToken(cancel => {
       store.commit(PUSH_TOKEN, {cancelToken: cancel})
    })
@@ -31,7 +32,7 @@ ajax.interceptors.request.use(config => {
 /**
  * 响应拦截器
  */
-ajax.interceptors.response.use(res => {
+axiosInstance.interceptors.response.use(res => {
    if (res.status === 200) {
       const statusCode = res.data.code;
       if (statusCode === 200) {
@@ -56,12 +57,12 @@ ajax.interceptors.response.use(res => {
 )
 
 
-const axiosGet = (url, data) => ajax.get(url, { params: data });
-const axiosPost = (url, data) => ajax.post(url, data);
+const ajaxGet = (url, data) => axiosInstance.get(url, { params: data });
+const ajaxPost = (url, data) => axiosInstance.post(url, data);
 
 export {
-   axiosGet,
-   axiosPost
+   ajaxGet,
+   ajaxPost
 }
 
-export default ajax;
+export default axiosInstance;

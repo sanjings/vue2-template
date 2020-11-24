@@ -2,7 +2,7 @@
  * @overview 公共相关请求集合
  * */
 
-import { axiosGet } from "../axios"
+import { ajaxGet } from "../ajax"
 import { GET_PROVINCE_CITY } from "../url"
 
 /**
@@ -10,7 +10,7 @@ import { GET_PROVINCE_CITY } from "../url"
  * @param {Object} params 
  */
 const getProvinceCity = (params) => {
-   return axiosGet(GET_PROVINCE_CITY, params)
+   return ajaxGet(GET_PROVINCE_CITY, params)
 }
 
 export {
