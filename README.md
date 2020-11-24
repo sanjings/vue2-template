@@ -78,7 +78,7 @@
         - watch
      - css
 11. vuex规范：
-    - 每个页面模块有自己独立的vuex模块，放在对应文件夹下的store文件夹下，在全局的store中导入
+    - 每个页面模块有自己独立的vuex模块，在store文件夹中模块化管理
     - state、mutations、getters、actions分离，在index中导入
     - 事件类型，在actionTypes中管理
 

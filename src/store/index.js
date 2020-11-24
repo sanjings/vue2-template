@@ -4,8 +4,8 @@ import state from './state'
 import getters from './getters'
 import mutations from './mutations'
 import actions from './actions'
-import homeStore from 'pages/Home/store'
-import aboutStore from 'pages/About/store'
+import homeStore from './home'
+import aboutStore from './about'
 
 Vue.use(Vuex)
 
