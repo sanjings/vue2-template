@@ -4,25 +4,29 @@
  **/
 
 export default {
-  set (name, value, options) {
-    options = options || {}
-    const hours = options.hours || 24 ;
+  set(name, value, options) {
+    options = options || {};
+    const hours = options.hours || 24;
     const domain = options.domain;
-    const path = options.path || '/'
-  
-    const date = new Date;
+    const path = options.path || '/';
+
+    const date = new Date();
     date.setTime(date.getTime() + 60 * 60 * 1000 * hours);
 
-    window.document.cookie = name + "=" + encodeURIComponent(value) + `${domain ? ';domain=' + domain : ''};path=${path};expires=` + date.toUTCString();
+    window.document.cookie =
+      name +
+      '=' +
+      encodeURIComponent(value) +
+      `${domain ? ';domain=' + domain : ''};path=${path};expires=` +
+      date.toUTCString();
   },
-  get (name) {
+  get(name) {
     let v = window.document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
     return v ? decodeURIComponent(v[2]) : null;
   },
-  delete (name, options) {
+  delete(name, options) {
     options = options || {};
     options.hours = -1;
     this.set(name, '', options);
   }
 };
- 

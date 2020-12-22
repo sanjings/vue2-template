@@ -19,18 +19,17 @@ export default {
     PageFooter,
     NavMenu
   }
-}
+};
 </script>
 
 <style lang="scss">
-  .app{
-    padding-bottom: 140px;
-    .footer{
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-    }
+.app {
+  padding-bottom: 140px;
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
   }
-  
+}
 </style>

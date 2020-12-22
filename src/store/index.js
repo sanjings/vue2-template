@@ -1,13 +1,13 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import state from './state'
-import getters from './getters'
-import mutations from './mutations'
-import actions from './actions'
-import homeStore from './home'
-import aboutStore from './about'
+import Vue from 'vue';
+import Vuex from 'vuex';
+import state from './state';
+import getters from './getters';
+import mutations from './mutations';
+import actions from './actions';
+import homeStore from './home';
+import aboutStore from './about';
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export default new Vuex.Store({
   state,
@@ -18,4 +18,4 @@ export default new Vuex.Store({
     home: homeStore,
     about: aboutStore
   }
-})
+});

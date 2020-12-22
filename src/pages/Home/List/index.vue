@@ -1,16 +1,11 @@
 <template>
   <div class="list-wrapper">
-    <list-item
-      v-for="(item, index) of data"
-      :key="index"
-      :data="item"
-    />
-    <button @click="setCount(3)">set</button>
+    <list-item v-for="(item, index) of listData" :key="index" :data="item" />
   </div>
 </template>
 
 <script>
-import ListItem from './item'
+import ListItem from './item';
 
 export default {
   name: 'List',
@@ -18,17 +13,17 @@ export default {
     ListItem
   },
   props: {
-    data: {
+    listData: {
       type: Array,
       default: () => []
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-  .list-wrapper{
-    margin: 0 auto;
-    width: 1200px;
-  }
+.list-wrapper {
+  margin: 0 auto;
+  width: 1200px;
+}
 </style>

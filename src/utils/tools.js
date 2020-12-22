@@ -16,7 +16,7 @@ const typeOf = val => {
   if (val === undefined) {
     return '请传参数';
   }
-  var type = typeof (val);
+  var type = typeof val;
   var toStr = Object.prototype.toString;
   if (val === null) {
     return 'null';
@@ -34,7 +34,11 @@ const typeOf = val => {
  * @return {String} 参数值
  */
 const getUrlKey = key => {
-  return decodeURIComponent((new RegExp('[?|&]'+ key + '=' + '([^&;]+?)(&|#|;|$)').exec(location.href) || [,""])[1].replace(/\+/g, '%20')) || null;
+  return (
+    decodeURIComponent(
+      (new RegExp('[?|&]' + key + '=' + '([^&;]+?)(&|#|;|$)').exec(location.href) || [, ''])[1].replace(/\+/g, '%20')
+    ) || null
+  );
 };
 
 /**
@@ -45,15 +49,15 @@ const getUrlKey = key => {
  */
 export const debounce = (fn, delayTime = 300) => {
   let timer = null;
-  return function (...args) {
+  return function(...args) {
     const _this = this;
 
     timer && clearTimeout(timer);
     timer = setTimeout(() => {
       fn.apply(_this, args);
-    }, delayTime)
-  }
-}
+    }, delayTime);
+  };
+};
 
 /**
  * 节流函数
@@ -63,19 +67,14 @@ export const debounce = (fn, delayTime = 300) => {
  */
 export const throttle = (fn, waitTime) => {
   let preTime = 0;
-  return function (...args) {
+  return function(...args) {
     const nowTime = new Date().getTime();
 
     if (nowTime - preTime >= waitTime) {
       fn.apply(this, args);
       preTime = nowTime;
     }
-  }
-}
+  };
+};
 
-export {
-  typeOf,
-  getUrlKey,
-  debounce,
-  throttle
-}
+export { typeOf, getUrlKey, debounce, throttle };

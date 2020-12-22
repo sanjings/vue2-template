@@ -1,9 +1,9 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import store from '@/store'
-import { CLEAR_TOKEN } from '@/store/actionTypes'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import store from '@/store';
+import { CLEAR_TOKEN } from '@/store/actionTypes';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
@@ -16,17 +16,17 @@ const routes = [
     name: 'About',
     component: () => import(/* webpackChunkName: "about" */ 'pages/About')
   }
-]
+];
 
 const router = new VueRouter({
+  mode: 'history',
   routes
-})
+});
 
 router.beforeEach((to, from, next) => {
   // 路由变化时中断当前未完成的ajax请求
   store.commit(CLEAR_TOKEN);
-  next()
-})
+  next();
+});
 
-
-export default router
+export default router;

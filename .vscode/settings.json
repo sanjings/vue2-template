@@ -1,0 +1,49 @@
+{
+  "vsicons.dontShowNewVersionMessage": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "javascript.format.enable": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "files.autoSave": "afterDelay",
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "html",
+    {
+      "language": "vue",
+      "autoFix": true
+    }
+  ],
+  "eslint.options": {
+    "extensions": [
+      ".js",
+      ".vue",
+      ".jsx"
+    ],
+    "plugins": [
+      "html"
+    ]
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.fontSize": 16,
+  "search.followSymlinks": false,
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace",
+    "gitlens.codeLens.scopes": [
+      "document"
+    ]
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
