@@ -85,7 +85,7 @@
 ### 项目运行
 #### clone项目
 ```
-git clone https://github.com/sanjing14/vue2-spa-template.git
+git clone https://github.com/sanjings/vue2-spa-template.git
 ```
 #### 安装依赖（如果没有yarn推荐使用cnpm）
 ```
