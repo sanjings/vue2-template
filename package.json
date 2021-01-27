@@ -1,7 +1,8 @@
 {
-  "name": "vue-spa-template",
+  "name": "vue2-spa-template",
   "version": "1.0.0",
   "private": true,
+  "author": "sanjing",
   "scripts": {
     "serve": "vue-cli-service serve",
     "serve:prod": "vue-cli-service serve --mode production",
