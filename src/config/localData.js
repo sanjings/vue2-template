@@ -1,6 +1,4 @@
-/**
- * 人员列表
- */
+// 人员列表
 export const userList = [
   { name: '张三', age: 28, sex: '男' },
   { name: '李四', age: 38, sex: '男' },

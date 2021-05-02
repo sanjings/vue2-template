@@ -2,8 +2,8 @@
  * @overview 公共相关请求集合
  * */
 
-import { ajaxGet } from '../ajax';
-import { GET_PROVINCE_CITY } from '../url';
+import { ajaxGet } from '@/utils/ajax';
+import { GET_PROVINCE_CITY } from '@/config/api';
 
 /**
  * 获取省份和城市

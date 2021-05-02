@@ -19,7 +19,7 @@ module.exports = {
     'eqeqeq': 1, // 使用全等===或者!==
     "no-extra-parens": 1, // 多余的括号
     "default-case": 1, // 在switch语句中需要有default语句
-    'no-console': process.env.NODE_ENV === 'production' ? 1 : 0, // 禁止console
+    // 'no-console': process.env.VUE_APP_CURRENTMODE === 'production' ? 1 : 0, // 禁止console
 
     /* 错误 */
     "prettier/prettier": 2,
@@ -31,8 +31,8 @@ module.exports = {
       "afterColon": true
     }],
     "no-var": 2, // 使用let和const代替var
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0, // 正式环境禁止使用debugger
-    'no-alert': process.env.NODE_ENV === 'production' ? 2 : 0, // 正式环境禁止使用alter
+    'no-debugger': process.env.VUE_APP_CURRENTMODE === 'production' ? 2 : 0, // 正式环境禁止使用debugger
+    'no-alert': process.env.VUE_APP_CURRENTMODE === 'production' ? 2 : 0, // 正式环境禁止使用alter
     "no-cond-assign": 2, // 条件语句禁止赋值表达式
     "comma-dangle": [2, "never"], // 对象字面量项尾不能有逗号
     "no-dupe-args": 2, // 函数参数不能重复

@@ -4,38 +4,43 @@
   "private": true,
   "author": "sanjing",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "serve:prod": "vue-cli-service serve --mode production",
-    "test": "vue-cli-service build --mode test",
+    "dev": "vue-cli-service serve",
+    "dev:prod": "vue-cli-service serve --mode dev-production",
     "build": "vue-cli-service build",
+    "test": "vue-cli-service build --mode test",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "axios": "^0.19.2",
-    "core-js": "^3.6.5",
-    "dayjs": "^1.8.33",
-    "element-ui": "^2.14.1",
-    "qs": "^6.9.4",
-    "vue": "^2.6.11",
-    "vue-router": "^3.2.0",
-    "vuex": "^3.4.0"
+    "axios": "^0.21.1",
+    "core-js": "^3.11.1",
+    "dayjs": "^1.10.4",
+    "element-ui": "^2.15.1",
+    "qs": "^6.10.1",
+    "vue": "^2.6.12",
+    "vue-router": "^3.5.1",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.3",
-    "@vue/cli-plugin-eslint": "^4.5.3",
-    "@vue/cli-plugin-router": "^4.5.3",
-    "@vue/cli-plugin-vuex": "^4.5.3",
-    "@vue/cli-service": "~4.5.3",
+    "@vue/cli-plugin-babel": "^4.5.12",
+    "@vue/cli-plugin-eslint": "^4.5.12",
+    "@vue/cli-plugin-router": "^4.5.12",
+    "@vue/cli-plugin-vuex": "^4.5.12",
+    "@vue/cli-service": "~4.5.12",
+    "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.1.0",
     "babel-plugin-component": "^1.1.1",
-    "eslint": "^6.7.2",
-    "eslint-plugin-prettier": "^3.3.0",
-    "eslint-plugin-vue": "^6.2.2",
+    "eslint": "^7.25.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.9.0",
     "image-webpack-loader": "^6.0.0",
     "node-sass": "^4.12.0",
     "prettier": "^2.2.1",
     "sass-loader": "^8.0.2",
     "terser-webpack-plugin": "^4.1.0",
-    "vue-template-compiler": "^2.6.11"
-  }
+    "vue-template-compiler": "^2.6.12"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }

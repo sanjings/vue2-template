@@ -6,7 +6,7 @@
 
 <script>
 import List from './List';
-import { userList } from '@/apis/data';
+import { userList } from '@/config/localData';
 
 export default {
   name: 'Home',
