@@ -9,8 +9,6 @@ import { GET_PROVINCE_CITY } from '@/config/api';
  * 获取省份和城市
  * @param {Object} params
  */
-const getProvinceCity = params => {
+export const httpGetProvinceCity = params => {
   return ajaxGet(GET_PROVINCE_CITY, params);
 };
-
-export { getProvinceCity };

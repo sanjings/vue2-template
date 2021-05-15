@@ -8,8 +8,6 @@ import { GET_OSS_IMG_UPLOAD_SIGN } from '@/config/api';
 /**
  * 获取阿里云图片上传sign
  */
-const getOssImgUploadSign = () => {
+const httpGetOssImgUploadSign = () => {
   return ajaxGet(GET_OSS_IMG_UPLOAD_SIGN);
 };
-
-export { getOssImgUploadSign };
