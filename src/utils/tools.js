@@ -16,12 +16,12 @@ const typeOf = val => {
   if (val === undefined) {
     return '请传参数';
   }
-  var type = typeof val;
-  var toStr = Object.prototype.toString;
+  let type = typeof val;
+  let toStr = Object.prototype.toString;
   if (val === null) {
     return 'null';
   } else if (type === 'object') {
-    var ret = toStr.call(val);
+    let ret = toStr.call(val);
     return res[ret];
   } else {
     return type;
@@ -42,19 +42,29 @@ const getUrlKey = key => {
 
 /**
  * 防抖函数
- * @params {Function} fn 要执行的函数
- * @params {Number} delayTime 延迟执行的时间
+ * @params {Function} 要执行的函数
+ * @params {Number} 延迟执行毫秒数
+ * @params {Boolean} 是否立即执行
  * @return {Function}
  */
-export const debounce = (fn, delayTime = 300) => {
+export const debounce = (fn, waitTime = 200, immediate = false) => {
   let timer = null;
   return function (...args) {
     const _this = this;
-
     timer && clearTimeout(timer);
-    timer = setTimeout(() => {
-      fn.apply(_this, args);
-    }, delayTime);
+    if (immediate) {
+      const callNow = !timer;
+      timer = setTimeout(function () {
+        timer = null;
+      }, waitTime);
+      if (callNow) {
+        fn.apply(_this, args);
+      }
+    } else {
+      timer = setTimeout(function () {
+        fn.apply(_this, args);
+      }, waitTime);
+    }
   };
 };
 
@@ -76,4 +86,4 @@ export const throttle = (fn, waitTime) => {
   };
 };
 
-export { typeOf, getUrlKey, debounce, throttle };
+export default { typeOf, getUrlKey, debounce, throttle };

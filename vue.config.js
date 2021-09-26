@@ -22,13 +22,7 @@ module.exports = {
       .options({ bypassOnDebug: true })
       .end();
     // 添加别名
-    config.resolve.alias
-      .set('@', resolve('src'))
-      .set('assets', resolve('src/assets'))
-      .set('requests', resolve('src/apis/requests'))
-      .set('components', resolve('src/components'))
-      .set('pages', resolve('src/pages'))
-      .set('utils', resolve('src/utils'));
+    config.resolve.alias.set('@', resolve('src')).set('assets', resolve('src/assets')).set('pages', resolve('src/pages'));
   },
   configureWebpack: config => {
     if (IS_PRODUCTION) {
@@ -56,13 +50,14 @@ module.exports = {
     loaderOptions: {
       scss: {
         prependData: `
-            @import "assets/styles/variables.scss";
-            `
+          @import "@/assets/styles/variables.scss";
+          @import "@/assets/styles/mixin.scss";
+        `
       }
     }
   },
   devServer: {
-    port: 3030, // 本地服务器端口号
+    port: 3000, // 本地服务器端口号
     open: true, // 编译后自动打开浏览器
     hotOnly: true // 开启热更新
   }

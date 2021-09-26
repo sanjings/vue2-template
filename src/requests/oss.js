@@ -2,12 +2,11 @@
  * @overview 阿里云相关请求集合
  * */
 
-import { ajaxGet } from '@/utils/ajax';
-import { GET_OSS_IMG_UPLOAD_SIGN } from '@/config/api';
+import { ajaxGet } from '@/utils/http';
 
 /**
  * 获取阿里云图片上传sign
  */
-const httpGetOssImgUploadSign = () => {
-  return ajaxGet(GET_OSS_IMG_UPLOAD_SIGN);
+export const httpGetOssImgUploadSign = () => {
+  return ajaxGet('/get/oss/upload/sign');
 };

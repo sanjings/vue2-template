@@ -1,6 +1,17 @@
 /* 改变主题色变量 */
-$--color-primary: #5EC4FF;
+$--color-primary: #409eff!default;
 /* 改变 icon 字体路径变量，必需 */
 $--font-path: '~element-ui/lib/theme-chalk/fonts';
- 
-@import "~element-ui/packages/theme-chalk/src/index";
+
+@import '~element-ui/packages/theme-chalk/src/index';
+
+.message-tip {
+  padding-bottom: 0;
+  width: 350px;
+  .el-message-box__title {
+    font-size: 16px;
+  }
+  .el-message-box__btns {
+    padding: 0;
+  }
+}

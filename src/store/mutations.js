@@ -1,11 +1,14 @@
-import { PUSH_TOKEN, CLEAR_TOKEN } from './actionTypes';
+import { PUSH_AJAXING, CLEAR_AJAXING, EXIT_LOGIN } from './actionTypes';
 
 export default {
-  [PUSH_TOKEN](state, payload) {
-    state.cancelTokenArr.push(payload.cancelToken);
+  [PUSH_AJAXING](state, payload) {
+    state.ajaxingArr.push(payload.cancelToken);
   },
-  [CLEAR_TOKEN](state) {
-    state.cancelTokenArr.forEach(item => item('路由跳转取消请求'));
-    state.cancelTokenArr = [];
+  [CLEAR_AJAXING](state) {
+    state.ajaxingArr.forEach(item => item('路由跳转取消请求'));
+    state.ajaxingArr = [];
+  },
+  [EXIT_LOGIN](state) {
+    state.userInfo = {};
   }
 };

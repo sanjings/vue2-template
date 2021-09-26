@@ -1,17 +1,26 @@
 <template>
-  <div class="home">
-    <List :listData="userList"></List>
+  <div class="home-container">
+    <HomeHeader></HomeHeader>
+    <div class="home-content">
+      <Introduce></Introduce>
+      <List :listData="userList"></List>
+    </div>
+    <HomeFooter></HomeFooter>
   </div>
 </template>
 
 <script>
-import List from './List';
-import { userList } from '@/config/localData';
+import HomeHeader from './Header';
+import HomeFooter from './Footer';
+import { userList } from '@/configs/localData';
 
 export default {
   name: 'Home',
   components: {
-    List
+    HomeHeader,
+    HomeFooter,
+    Introduce: () => import('@/components/Introduce'),
+    List: () => import('./List')
   },
   data() {
     return {
@@ -20,3 +29,14 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.home-container {
+  .home-content {
+    margin: {
+      top: 100px;
+      bottom: 100px;
+    }
+  }
+}
+</style>

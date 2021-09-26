@@ -1,8 +1,16 @@
-$color-default: #333;
-$color-green: #57d2cd;
-$color-purple: #3a5de3;
+/* 颜色 ------------------------------------------  */
+$color-black: #333333;
+$color-gray: #a4abb3;
+$color-blue: #409eff;
+$color-white: #ffffff;
 
+/* 字体大小 ------------------------------------------  */
+$font-size-large: 20px;
+$font-size-medium: 18px;
 $font-size-default: 16px;
-$font-size-large: 18px;
 $font-size-small: 14px;
 $font-size-mini: 12px;
+
+/* 边框 ------------------------------------------  */
+$border-color-gray-l: #e4e7ed;
+$border-color-gray-d: #dcdfe6;

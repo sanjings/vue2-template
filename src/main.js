@@ -3,9 +3,8 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 
-import 'assets/styles/reset.css';
-import 'assets/styles/common.scss';
-import 'assets/fonts/iconfont.css';
+// 引入公共样式
+import './assets/styles/index.scss';
 
 // 按需引入element-ui并配置主题色
 import Element from './plugins/Element.js';
@@ -13,7 +12,7 @@ import './assets/styles/element-variables.scss';
 Vue.use(Element);
 
 // 引入全局过滤器
-import filters from './utils/filters.js';
+import * as filters from './filters';
 Object.keys(filters).forEach(item => Vue.filter(item, filters[item]));
 
 // 捕获全局promise-reject

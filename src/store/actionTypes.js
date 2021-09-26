@@ -1,3 +1,8 @@
-export const PUSH_TOKEN = 'PUSH_TOKEN';
+// 添加ajax请求集合
+export const PUSH_AJAXING = 'PUSH_AJAXING';
 
-export const CLEAR_TOKEN = 'CLEAR_TOKEN';
+// 中断ajax请求
+export const CLEAR_AJAXING = 'CLEAR_AJAXING';
+
+// 退出登录
+export const EXIT_LOGIN = 'EXIT_LOGIN';
