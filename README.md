@@ -1,9 +1,10 @@
-# 基于Vue2的单页面项目模板
+# 基于Vue2+ElementUi的单页面项目模板
 
 ### 技术栈  
 - **[vue v2](https://github.com/vuejs/vue):**  vue全家桶
 - **[axios](https://github.com/axios/axios):**  基于promise的HTTP库
-- **[dayjs](https://github.com/iamkun/dayjs):** 完美替代momentjs的轻量级时间处理库 
+- **[dayjs](https://github.com/iamkun/dayjs):** 完美替代momentjs的轻量级时间处理库
+- **[element-ui](https://github.com/ElemeFE/element):** 基于Vue2的桌面端组件库
 
 ### 项目架构
 ```
@@ -55,7 +56,7 @@ npm install or yarn
 ```
 yarn dev or npm run dev
 ```
-#### 本地运行生成环境
+#### 本地运行生产环境
 ```
 yarn dev:prod or npm run dev:prod
 ```
