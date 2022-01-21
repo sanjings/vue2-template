@@ -46,10 +46,11 @@
 ```
 git clone https://github.com/sanjings/vue2-spa-template.git
 ```
-#### 安装依赖（如果没有yarn推荐使用cnpm）
+#### 安装依赖（推荐使用pnpm）
 ```
+npm i pnpm -g
 cd vue2-spa-template
-npm install or yarn
+pnpm install
 ```
 
 #### 本地运行测试环境
